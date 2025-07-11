@@ -1,0 +1,127 @@
+**ESTATISTICAS**
+  {
+    "mais_desperdicados": "FRUTA",
+    "total_alimentos": 300,
+    "total_doacoes": 180,
+    "total_recebidos": 160,
+    "ranking_categoria": "FRUTA > DOCE > LEGUME"
+  }
+
+**RECEPTOR**
+
+  {
+    "nome": "Associação Vida Nova",
+    "tipo": "ONG",
+    "endereco": "Av. Brasil, 1450 - BH",
+    "contato": "(31) 99999-0000",
+    "capacidade_recebimento": 200,
+    "alimentos_recebidos": 80,
+    "Atualizado_em": "2025-05-09T11:00:00Z"
+  }
+
+**DOAÇÃO**
+  {
+    "alimento_nome": "Arroz Integral",
+    "quantidade": 20,
+    "doador_nome": "Carlos Silva",
+    "data_doacao": "2025-05-08T14:00:00Z",
+    "localizacao": "Rua das Acácias, 120",
+    "validado": true
+  },
+    {
+    "alimento_nome": "Cenoura",
+    "quantidade": 50,
+    "doador_nome": "Distribuidora Bom Sabor",
+    "data_doacao": "2025-05-20T14:00:00Z",
+    "localizacao": "Rua Central, 500",
+    "validado": true
+  }
+
+**DISTRIBUIDOR**
+  {
+    "nome": "Distribuidora Alere",
+    "contato": "contato@alere.org",
+    "documento": "29.345.678/0001-12",
+    "alimentos": "Arroz, Feijão",
+    "regiao_atuacao": "Belo Horizonte",
+    "Atualizado_em": "2025-05-10T08:45:00Z"
+  },
+
+    {
+    "nome": "Distribuidora Bom Sabor",
+    "contato": "(31) 91234-5678",
+    "documento": "987.654.321-00",
+    "alimentos": "Cenoura, Bolo de Chocolate",
+    "regiao_atuacao": "Contagem"
+  }
+
+**ALIMENTO**
+
+  {
+    "nome": "Arroz Integral",
+    "descricao": "Pacote de arroz integral 1kg",
+    "peso": 1000,
+    "validade": "2025-06-10",
+    "categoria": "Grãos",
+    "estado": 1,
+    "imagem_url": "https://exemplo.com/imagens/arroz.jpg",
+    "Atualizado_em": "2025-05-10T10:00:00Z"
+  },
+  {
+    "nome": "Feijão Preto",
+    "descricao": "Feijão preto tipo 1",
+    "peso": 1000,
+    "validade": "2025-05-20",
+    "categoria": "Grãos",
+    "estado": 1,
+    "imagem_url": "https://exemplo.com/imagens/feijao.jpg"
+  },
+  {
+ 
+    "nome": "Maçã",
+    "descricao": "Maçã orgânica, doce e fresca",
+    "peso": 200,
+    "validade": "2025-06-01",
+    "categoria": "FRUTA",
+    "estado": 1,
+    "imagem_url": "https://exemplo.com/imagem/maca.jpg"
+  },
+  {
+    "nome": "Hambúrguer",
+    "descricao": "Hambúrguer congelado bovino",
+    "peso": 500,
+    "validade": "2025-06-15",
+    "categoria": "CARNE",
+    "estado": 1,
+    "imagem_url": "https://exemplo.com/imagem/hamburguer.jpg"
+  },
+
+
+  **RECEPTOR**
+
+  {
+    "nome": "Escola Comunitária Esperança",
+    "tipo": "ESCOLA",
+    "endereco": "Av. Brasil, 1234",
+    "contato": "(31) 99900-1122",
+    "capacidade_recebimento": 200,
+    "alimentos_recebidos": 80
+  }
+
+**AGENDAMENTO**
+  {
+    "data_hora": "2025-05-25T09:00:00Z",
+    "status": "ACEITO",
+    "observacoes": "aaaaa",
+    "alimento_nome": "Cenoura",
+    "distribuidor_nome": "Distribuidora Bom Sabor",
+    "receptor_nome": "Escola Comunitária Esperança"
+  }
+
+  **NOTIFICACOES**
+    {
+    "categoria": "IMPORTANTE",
+    "mensagem": "A entrega de cenouras foi confirmada.",
+    "receptor": "Escola Comunitária Esperança",
+    "lida": false
+  }

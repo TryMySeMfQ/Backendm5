@@ -1,0 +1,139 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("BACKEND_URL")
+}
+
+
+generator client {
+provider =  "prisma-client-js"
+}
+
+enum categoriaENUM {
+  LEGUME 
+  FRUTA
+  DOCE
+  CARNE
+  TRANSGENICO
+  LANCHE
+  REFEICAO
+}
+
+model alimento {
+  id                          String            @id @default(uuid())
+  nome                        String 
+  descricao                   String
+  peso                        Int 
+  validade                    String
+  categoria                   categoriaENUM
+  estado                      Int
+  imagem_url                  String
+  criado_em                   DateTime           @default(now())
+  atualizado_em               DateTime           @updatedAt 
+}
+
+
+
+//documento(cnpj/cpf) alimentos vai receber de alimento
+model distribuidor {
+  id                      String             @id @default(uuid())
+  nome                    String   
+  contato                 String
+  documento               String
+  alimentos               String
+  regiao_atuacao          String
+  criado_em               DateTime           @default(now())
+  atualizado_em           DateTime           @updatedAt 
+}
+//referencia da tabela alimento
+
+
+
+
+
+//TABELA ESTATISTICA
+model estatistica {
+id                       String              @id @default(uuid())
+mais_desperdicados       String
+total_alimentos          Int
+total_doacoes            Int
+total_recebidos          Int
+ranking_categoria        String
+criado_em                DateTime            @default(now())
+atualizado_em            DateTime            @updatedAt
+}
+
+//TABELA DOACAO
+model doacao {
+  id                 String        @id @default(uuid())
+  alimento_nome      String      
+  quantidade         Int
+  doador_nome        String
+  data_doacao        DateTime
+  localizacao        String
+  validado           Boolean       @default(false)
+  criado_em          DateTime      @default(now())
+  atualizado_em      DateTime      @updatedAt
+}
+//referencia de alimento
+
+
+
+//TABELA RECEPTOR
+enum tipoENUM {
+ONG
+ESCOLA
+HOSPITAL
+PJ
+PF
+OUTRO
+} 
+
+model receptor{
+  id                       String              @id @default(uuid())
+  nome                     String
+  tipo                     tipoENUM
+  endereco                 String
+  contato                  String
+  capacidade_recebimento   Int
+  alimentos_recebidos      Int
+  criado_em                DateTime             @default(now())
+  Atualizado_em            DateTime             @updatedAt
+ 
+}
+
+
+//TABELA AGENDAMENTO
+enum statusENUM {
+  INICIADO
+  ACEITO
+  CONCLUIDO
+  RECEBIDO
+}
+
+model agendamento {
+  id                       String              @id @default(uuid())
+  data_hora                DateTime
+  status                   statusENUM
+  observacoes              String
+  alimento_nome            String
+  distribuidor_nome        String
+  receptor_nome            String
+  criado_em                DateTime            @default(now())
+  atualizado_em            DateTime            @updatedAt
+}
+
+//TABELA NOTIFICACOES
+enum tipagemENUM {
+  IMPORTANTE
+  URGENTE
+  OUTRAS
+}
+
+model notificacoes {
+  id                     String         @id @default(uuid()) 
+  categoria              tipagemENUM
+  mensagem               String
+  receptor               String
+  lida                   Boolean
+  criado_em              DateTime       @default(now())
+}

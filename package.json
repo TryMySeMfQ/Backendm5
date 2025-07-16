@@ -9,7 +9,7 @@
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
     "prisma:migrate": "npx prisma migrate dev",
-    "prisma:generate": "npx prisma generate",
+    "prisma:generate": "prisma generate",
     "tests": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "render-build": "npm install && npm run prisma:generate && npm run prisma:migrate"
   },

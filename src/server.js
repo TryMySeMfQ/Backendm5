@@ -1,9 +1,9 @@
 import app from './app.js';
 import { logEvents } from './middlewares/logger.middlewares.js';
 
-const PORT = process.env.BACKEND_PORT || 3000;
+const PORT = process.env.BACKEND_PORT || 4000;
 
-app.listen(PORT, async () => {
-  console.log(`Rodando na porta http://localhost:${PORT}`);
-  logEvents(`Rodando na porta http://localhost:${PORT}`, 'listen.log');
+app.listen(PORT, () => {
+  console.log(`Servidor rodando em http://localhost:${PORT}`);
+  logEvents(`Servidor iniciado na porta ${PORT}`, 'server.log');
 });

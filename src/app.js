@@ -3,16 +3,26 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import { logger } from './middlewares/logger.middlewares.js';
 import { swaggerUi, swaggerSpec } from './swagger.js';
+import cookieParser from 'cookie-parser';
 
 // Configura variáveis de ambiente
 dotenv.config();
 
 const app = express();
 
+const cookieOptions = {
+  httpOnly: true,
+  secure: process.env.NODE_ENV === 'production',
+  sameSite: 'strict',
+  maxAge: 3600000, // 1 hora
+  path: '/'
+};
+
 // CORS configurado
 const cors_config = { origin: 'http://localhost:3000' };
 
 // Middlewares
+app.use(cookieParser());
 app.use(logger);
 app.use(express.json());
 app.use(cors(cors_config));

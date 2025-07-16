@@ -2,3 +2,6 @@
 2025-07-09	21:24:00	5f0aee45-1aa4-490d-99a4-d38c9f348b1e	GET	/alimetos	undefined
 2025-07-09	21:33:43	c006f082-6fc3-42df-aa69-623bcff1fd66	GET	/receptor/cadastro	undefined
 2025-07-09	21:33:47	bc673017-6f5c-469d-a73f-cac32ab14aa3	GET	/.well-known/appspecific/com.chrome.devtools.json	undefined
+2025-07-16	18:18:41	5d7b6ca1-af3a-4255-990a-f0aad07d8e11	GET	/	undefined
+2025-07-16	18:18:47	8b1fcabb-9def-41e5-801e-23ccdc1483e7	GET	/.well-known/appspecific/com.chrome.devtools.json	undefined
+2025-07-16	18:40:56	9bbda37a-3bf0-475d-8801-6cc65926cecd	GET	/	undefined

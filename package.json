@@ -8,8 +8,8 @@
     "test": "cross-env NODE_ENV=test jest",
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
-    "prisma:migrate": "prisma migrate dev --schema=./src/prisma/schema.prisma",
-    "prisma:generate": "prisma generate --schema=./src/prisma/schema.prisma",
+    "prisma:migrate": "npx prisma migrate dev",
+    "prisma:generate": "npx prisma generate",
     "prisma:studio": "prisma studio --schema=src/prisma/schema.prisma",
     "tests": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "render-build": "npm install && npm run prisma:generate && npm run prisma:migrate"
